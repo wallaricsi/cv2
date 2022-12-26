@@ -1,27 +1,46 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+rel="stylesheet"
+/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CV - Resume</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <style>
+      .button {   }      
+    </style>
   </head>
-  <body>
+<body>
+<div class="container text-center mt-5">
+<button class="" style="display: inline; border: none; background-color: white;" ><img src="hun.jpg" alt="hungary" width="40" height="30"></button>
+<button class="" style="display: inline; border: none; background-color: white;" ><img src="uk.png" alt="hungary" width="41" height="40"></button>
+</div>
 
-  <div class="container pt-5 sm-5 justify-content-center ">
+<div class="container text-center mt-5">
+<button type="button" onclick="window.print()" style="display: inline;" class="btn btn-success">Print</button>
+<button type="button" onclick="makePDF()" class="btn btn-success">Download PDF</button>
+</div>
+
+<div class="body" id="pdf">
+  <div class="container mt-5 sm-5 justify-content-center ">
       <h1 class="pb-5 text-center">Schvéd Gábor </h1>
   
   <header class="text-center">
     <img class='logo justify-content-center rounded-circle' src="cv.png" alt="CV">
-    <h1 class="name text-center pt-5">- - -</h1>
+    <h1 class="name text-center mt-5">- - -</h1>
 
     <div class="container justify-content-center">
   </header> 
   <div class="d-flex justify-content-center">
   <nav> 
       <ul>        
-          <li >E-mail: <span id="mail" onclick="mail()">********************</span></li>
-          <li >Mobil: <span id="mobil" onclick="mobil()">+36**/***-****</span></li>
+          <li >E-mail:<button style="border: none; color: black; background-color: white;" id="mail" onclick="mail()">****************** </button></li>
+          <li >Mobil: <button style="border: none; color: black; background-color: white;"  id="mobil" onclick="mobil()">+36**/***-****</button></li>
       </ul>
   </nav>
 </div>
@@ -91,7 +110,13 @@
           <div class="col-lg-9"><li>Egyéb </li></div>
         </div>
       </div>
-          <!-- MKB Bank -->
+
+    <!-- PAGE BREAK  -->
+    <div class="html2pdf__page-break"></div>
+    <!-- PAGE BREAK  -->
+
+
+    <!-- MKB Bank -->
     <div class="container" style="width: 800px;">
       <div class="row">
         <div class="col-lg-3 pt-5">
@@ -342,6 +367,7 @@
 </div>
 
 
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script text="text/javascript" src="./index.js"></script>  
 </body>

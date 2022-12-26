@@ -8,9 +8,20 @@ accordionItem.forEach((parent) => {
 
 function mail() {
     var x = document.getElementById("mail");
-        x.innerHTML = "svedgabor24@gmail.com";    
+        x.innerHTML = "please login first!";    
   }
   function mobil() {
     var x = document.getElementById("mobil");
-        x.innerHTML = "+3620/397-41*";    
+        x.innerHTML = "please login first!";    
+  }
+
+  let cdate = new Date().toISOString().replace('-', '_').split('T')[0].replace('-', '/');
+
+  var opt = {
+    margin:       1,
+    filename:     'CV_Schved_Gabor_'+cdate+'.pdf'};
+
+  function makePDF() {
+    let element = document.getElementById("pdf");
+    html2pdf().set(opt).from(element).save()
   }
