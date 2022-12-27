@@ -31,17 +31,25 @@ function mail() {
 const toggle = document.getElementById('toggleDark');
 const toggle1 = document.getElementById('toggleDark2');
 const body = document.querySelector('body');
+const mail1 = document.getElementById('mail');
+const mobil1 = document.getElementById('mobil');
 
 toggle.addEventListener('click', function(){
   toggle1.classList.toggle('bi-brightness-high-fill');
     if(toggle1.classList.toggle('bi-moon')){
       body.style.background = '#424242';
       body.style.color = 'white';
+      // buttons
+      mail1.style.color = 'white';
+      mobil1.style.color = 'white';
       body.style.transition = '1s';
 
     }else{
       body.style.background = 'white';
       body.style.color = 'black';
+       // buttons
+      mail1.style.color = 'black';
+      mobil1.style.color = 'black';
       body.style.transition = '1s';
     }
 });
