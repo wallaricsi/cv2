@@ -25,3 +25,23 @@ function mail() {
     let element = document.getElementById("pdf");
     html2pdf().set(opt).from(element).save()
   }
+
+
+// DARK MODE 
+const toggle = document.getElementById('toggleDark');
+const toggle1 = document.getElementById('toggleDark2');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+  toggle1.classList.toggle('bi-brightness-high-fill');
+    if(toggle1.classList.toggle('bi-moon')){
+      body.style.background = '#424242';
+      body.style.color = 'white';
+      body.style.transition = '1s';
+
+    }else{
+      body.style.background = 'white';
+      body.style.color = 'black';
+      body.style.transition = '1s';
+    }
+});
